@@ -4,11 +4,11 @@
     name: etcd
     update_cache: yes
   notify:
-    - Start etcd
+    - Start Etcd
   tags: etcd
 - name: Inicia e ativa na inicializacao o servico etcd
   systemd:
-    name: etcd
+    name: Etcd
     state: started
     enabled: yes
   tags: etcd    
