@@ -1,14 +1,14 @@
 ---
-- name: Instala MySQL Server
+- name: Instala ETCD Server
   apt:
-    name: mariadb-server python3-pymysql
+    name: etcd
     update_cache: yes
   notify:
-    - Start MySQL
-  tags: banco
-- name: Inicia e ativa na inicializacao o servico mariadb
+    - Start etcd
+  tags: etcd
+- name: Inicia e ativa na inicializacao o servico etcd
   systemd:
-    name: mariadb
+    name: etcd
     state: started
     enabled: yes
-  tags: banco    
+  tags: etcd    
