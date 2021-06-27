@@ -8,7 +8,7 @@
   tags: etcd
 - name: Inicia e ativa na inicializacao o servico etcd
   systemd:
-    name: Etcd
+    name: etcd
     state: started
     enabled: yes
   tags: etcd    
